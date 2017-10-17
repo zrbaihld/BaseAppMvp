@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/top_bar_view"
+    android:layout_width="match_parent"
+    android:layout_height="96px"
+    android:background="#00e2c5"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/iv_back"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_back_img"
+            android:layout_width="40px"
+            android:layout_height="33px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="26px"
+            android:layout_marginRight="26px"
+            android:background="@drawable/icon_back" />
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="title"
+        android:drawablePadding="5px"
+        android:textColor="@color/white"
+        android:textSize="@dimen/TextTitleSize" />
+
+    <ImageView
+        android:id="@+id/iv_right"
+        android:layout_width="96px"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:padding="29px"
+        android:src="@drawable/ic_launcher"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_right"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginRight="26px"
+        android:gravity="center"
+        android:text="显示头像"
+        android:visibility="gone"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/TextTitleColor"
+        android:textSize="@dimen/TextNormalSize" />
+    <LinearLayout
+        android:id="@+id/ll_right"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:visibility="gone"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:lines="2"
+            android:text="显示\n头像"
+            android:textColor="@color/TextTitleColor"
+            android:textSize="@dimen/TextSmallSize" />
+
+
+
+    </LinearLayout>
+</com.zhy.autolayout.AutoRelativeLayout>

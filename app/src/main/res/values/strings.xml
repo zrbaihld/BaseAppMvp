@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">BaseAppMvp</string>
+    <string name="has_no_data">has_no_data</string>
+</resources>

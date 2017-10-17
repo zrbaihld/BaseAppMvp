@@ -1,0 +1,73 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'org.greenrobot.greendao' // apply plugin
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+
+    defaultConfig {
+        applicationId "com.zrb.baseappmvp"
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            buildConfigField "String", "baseUrl", rootProject.ext.release.BaseURL
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            buildConfigField "String", "baseUrl", rootProject.ext.debug.BaseURL
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/rxjava.properties'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        // ... and any other excludes Go here
+    }
+}
+greendao {
+    schemaVersion 1
+}
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:3.0.1', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    implementation deps.mkotlin
+    implementation deps.supportv4
+    implementation deps.appcompatv7
+    testImplementation deps.junit
+    implementation deps.constraint
+    implementation deps.recyclerviewv7
+    implementation deps.ankosdk
+    implementation deps.ankoappcompat
+    implementation deps.ankodesign
+    implementation deps.ankorecyclerview
+    implementation deps.rxjava
+    implementation deps.rxandroid
+    implementation deps.retrofit
+    implementation deps.convertergson
+    implementation deps.rxbinding
+    implementation deps.gson
+    implementation deps.retrofit2adapter
+    implementation deps.greendao
+    implementation deps.convenientbanner
+    implementation deps.viewpagertransforms
+    implementation project(':autolayout')
+    implementation project(':takephoto_library')
+    implementation project(':xrecyclerview')
+}

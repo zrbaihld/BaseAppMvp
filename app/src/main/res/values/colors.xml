@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="white">#ffffff</color>
+    <color name="tran">#00000000</color>
+
+    <color name="TextTitleColor">#414141</color>
+    <color name="TextAuxiliaryColor">#828282</color>
+    <color name="TextTipColor">#a3a3a3</color>
+    <color name="mainColor">#00e1c5</color>
+    <color name="_9">#999999</color>
+
+    <color name="lineColor">#f3f3f3</color>
+
+    <color name="PressedButtonColor">#00a45f</color>
+    <color name="NormalButtonColor">#00e1c5</color>
+    <color name="UnClickButtonColor">#dddddd</color>
+</resources>

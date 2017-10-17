@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.jcodecraeer.xrecyclerview.XRecyclerView
+        android:id="@+id/view_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:layout_marginTop="20px"></com.jcodecraeer.xrecyclerview.XRecyclerView>
+
+    <TextView
+        android:id="@+id/view_empty"
+        android:layout_width="667px"
+        android:layout_height="430px"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:visibility="gone"
+        android:background="@drawable/icon_no_data"
+       />
+</com.zhy.autolayout.AutoRelativeLayout>

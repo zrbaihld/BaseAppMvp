@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:state_pressed="true">
+    <shape >
+        <solid android:color="@color/PressedButtonColor"></solid>
+        <corners android:radius="20px"></corners>
+    </shape>
+</item>
+<item android:state_enabled="false">
+    <shape >
+        <solid android:color="@color/UnClickButtonColor"></solid>
+        <corners android:radius="20px"></corners>
+    </shape>
+</item>
+<item >
+    <shape >
+        <solid android:color="@color/NormalButtonColor"></solid>
+        <corners android:radius="20px"></corners>
+    </shape>
+</item>
+</selector>
